@@ -1,6 +1,3 @@
-# technical-writing-bombjack
-Technical writing exercises - bombjack documentation
-
 # Bomb Jack — Ciclo di Vita della Documentazione Tecnica
 
 Questo repository illustra il **ciclo di vita completo della documentazione tecnica** relativa al progetto *Bomb Jack* — un classico videogioco arcade rivisitato in chiave moderna o analizzato come esempio di *technical writing* per sviluppatori.
