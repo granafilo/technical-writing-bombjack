@@ -6,10 +6,10 @@ const GAME_CONFIG = {
     PLAYER: {
         WIDTH: 24,
         HEIGHT: 32,
-        MOVE_SPEED: 150,
-        JUMP_POWER: 400,
-        GRAVITY: 1200,
-        GLIDE_GRAVITY: 300,
+        MOVE_SPEED: 180,
+        JUMP_POWER: 550,
+        GRAVITY: 1100,
+        GLIDE_GRAVITY: 250,
         MAX_FALL_SPEED: 600,
         COLOR: '#FFD700'
     },
