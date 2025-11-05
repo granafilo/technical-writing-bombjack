@@ -34,9 +34,6 @@ Questo repository illustra il ciclo di vita completo della documentazione tecnic
    - Gestione delle issue e dei feedback.
    
 
-## ⚖️ Licenza
-Distribuito sotto licenza [MIT](LICENSE).
-
 ## 👤 Autore
 Documentazione curata da [Nome Cognome]  
 Corso di Technical Writing per Sviluppatori
