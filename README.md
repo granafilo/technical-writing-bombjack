@@ -54,4 +54,4 @@ Il giocatore controlla **Jack**, un eroe capace di saltare e planare, con l’ob
 - Suoni e grafica retrò.  
 
 Autore
-Documentazione curata da **[tuo nome]**  
+Documentazione curata da **Filippo Granata, Alessandro Cervini, Alessandro Tabaku**  
