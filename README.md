@@ -1,16 +1,16 @@
 # technical-writing-bombjack
 Technical writing exercises - bombjack documentation
-# 📘 Ciclo di Vita della Documentazione Tecnica
+# Ciclo di Vita della Documentazione Tecnica
 
 Questo repository illustra il ciclo di vita completo della documentazione tecnica per sviluppatori, dalla pianificazione alla pubblicazione.  
 È pensato per chi scrive, revisiona o mantiene documentazione in un contesto software (Technical Writing for Developers).
 
-## 🎯 Obiettivi
+## Obiettivi
 - Definire un flusso chiaro per la creazione, revisione e aggiornamento della documentazione tecnica.
 - Promuovere buone pratiche di scrittura e versionamento.
 - Fornire un esempio concreto di ciclo di vita documentale in un ambiente di sviluppo collaborativo (Git/GitHub).
 
-## 🔄 Fasi del Ciclo di Vita
+## Fasi del Ciclo di Vita
 
 1. **Pianificazione**  
    - Analisi del pubblico e degli obiettivi.  
@@ -33,7 +33,7 @@ Questo repository illustra il ciclo di vita completo della documentazione tecnic
    - Gestione delle issue e dei feedback.
    
 
-## 👤 Autore
+## Autore
 Documentazione curata da [Nome Cognome]  
 Corso di Technical Writing per Sviluppatori
 
