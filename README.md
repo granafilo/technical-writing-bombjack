@@ -42,7 +42,7 @@ Questo repository illustra il **ciclo di vita completo della documentazione tecn
    - Gestione delle *issue* relative a bug o documentazione obsoleta.
 
 
-Descrizione del Gioco
+**Descrizione del Gioco**
 
 *Bomb Jack* è un videogioco arcade originariamente pubblicato nel 1984 da Tehkan (oggi Tecmo).  
 Il giocatore controlla **Jack**, un eroe capace di saltare e planare, con l’obiettivo di **raccogliere tutte le bombe** presenti in ogni livello evitando i nemici.
