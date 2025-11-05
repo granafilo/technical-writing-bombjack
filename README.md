@@ -1,6 +1,5 @@
 # technical-writing-bombjack
 Technical writing exercises - bombjack documentation
-
 # 📘 Ciclo di Vita della Documentazione Tecnica
 
 Questo repository illustra il ciclo di vita completo della documentazione tecnica per sviluppatori, dalla pianificazione alla pubblicazione.  
