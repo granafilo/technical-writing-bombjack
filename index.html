@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomb Jack - Documentazione Tecnica</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav-btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background: #f8f9fa;
+        }
+
+        .nav-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            min-height: 400px;
+        }
+
+        .markdown-content {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .markdown-content h1 {
+            color: #667eea;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .markdown-content h2 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .markdown-content h3 {
+            color: #555;
+            margin-top: 1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .markdown-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            overflow-x: auto;
+            display: block;
+        }
+
+        .markdown-content table th,
+        .markdown-content table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .markdown-content table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        .markdown-content table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .markdown-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-content code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .markdown-content pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #666;
+            font-style: italic;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #667eea;
+            font-size: 1.2rem;
+        }
+
+        .meeting-notes {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .meeting-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .meeting-card:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .meeting-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+            .nav-btn {
+                width: 100%;
+            }
+
+            .content-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Bomb Jack</h1>
+            <p>Ciclo di Vita della Documentazione Tecnica</p>
+        </header>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <a href="/game/" style="text-decoration: none;">
+                <button style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #000; font-size: 1.5rem; padding: 1.5rem 3rem; border: none; border-radius: 12px; cursor: pointer; font-weight: bold; box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4); transition: all 0.3s ease;">
+                    🎮 PLAY BOMB JACK GAME 🎮
+                </button>
+            </a>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn active" onclick="loadDoc(event, 'home')">Home</button>
+            <button class="nav-btn" onclick="loadDoc(event, 'prd')">PRD</button>
+            <button class="nav-btn" onclick="loadDoc(event, 'analisi_funzionale')">Analisi Funzionale</button>
+            <button class="nav-btn" onclick="loadDoc(event, 'analisi_tecnica')">Analisi Tecnica</button>
+            <button class="nav-btn" onclick="loadDoc(event, 'supporto_ai')">Supporto AI</button>
+            <button class="nav-btn" onclick="loadDoc(event, 'meeting_notes')">Verbali Riunioni</button>
+        </div>
+
+        <div class="content-card">
+            <div id="content" class="markdown-content">
+                <div class="loading">Caricamento...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const docs = {
+            home: 'README.md',
+            prd: 'docs/prd.md',
+            analisi_funzionale: 'docs/analisi_funzionale.md',
+            analisi_tecnica: 'docs/analisi_tecnica.md',
+            supporto_ai: 'docs/supporto_AI.md'
+        };
+
+        const meetingNotes = [
+            { title: 'Verbale Riunione: Giovedì "Bomb Jack"', file: 'verbali_riunioni/Verbale Riunione_ Giovedì _Bomb Jack_.md' },
+            { title: 'Verbale Riunione: Lunedì "Bomb Jack"', file: 'verbali_riunioni/Verbale Riunione_ Lunedì _Bomb Jack_.md' },
+            { title: 'Verbale Riunione: Martedì "Bomb Jack"', file: 'verbali_riunioni/Verbale Riunione_ Martedì _Bomb Jack_.md' },
+            { title: 'Verbale Riunione: Mercoledì "Bomb Jack"', file: 'verbali_riunioni/Verbale Riunione_ Mercoledì _Bomb Jack_.md' }
+        ];
+
+        async function loadDoc(event, docName) {
+            const contentDiv = document.getElementById('content');
+            const buttons = document.querySelectorAll('.nav-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+
+            if (docName === 'meeting_notes') {
+                showMeetingNotes();
+                return;
+            }
+
+            contentDiv.innerHTML = '<div class="loading">Caricamento...</div>';
+
+            try {
+                const response = await fetch(docs[docName]);
+                if (!response.ok) throw new Error('Documento non trovato');
+                
+                const markdown = await response.text();
+                contentDiv.innerHTML = marked.parse(markdown);
+            } catch (error) {
+                contentDiv.innerHTML = `<p style="color: red;">Errore nel caricamento: ${error.message}</p>`;
+            }
+        }
+
+        function showMeetingNotes() {
+            const contentDiv = document.getElementById('content');
+            let html = '<h1>Verbali delle Riunioni</h1><div class="meeting-notes">';
+            
+            meetingNotes.forEach(note => {
+                html += `
+                    <div class="meeting-card" onclick="loadMeetingNote('${note.file}')">
+                        <h3>📝 ${note.title}</h3>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            contentDiv.innerHTML = html;
+        }
+
+        async function loadMeetingNote(file) {
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = '<div class="loading">Caricamento...</div>';
+
+            try {
+                const response = await fetch(file);
+                if (!response.ok) throw new Error('Documento non trovato');
+                
+                const markdown = await response.text();
+                contentDiv.innerHTML = marked.parse(markdown);
+            } catch (error) {
+                contentDiv.innerHTML = `<p style="color: red;">Errore nel caricamento: ${error.message}</p>`;
+            }
+        }
+
+        loadDoc(null, 'home');
+    </script>
+</body>
+</html>

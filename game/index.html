@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomb Jack - PC Remake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="start-screen" class="screen">
+            <h1>🎮 BOMB JACK</h1>
+            <p>Collect all 24 bombs to complete the round!</p>
+            <div class="controls">
+                <h3>Controls:</h3>
+                <p><strong>Arrow Keys / WASD:</strong> Move left/right</p>
+                <p><strong>Space / Z:</strong> Jump / Glide (hold in air)</p>
+            </div>
+            <button id="start-btn" onclick="game.start()">START GAME</button>
+            <button onclick="window.location.href='/'">View Documentation</button>
+        </div>
+        <div id="game-over-screen" class="screen hidden">
+            <h1>GAME OVER</h1>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <p>Rounds Completed: <span id="final-round">0</span></p>
+            <button onclick="game.restart()">PLAY AGAIN</button>
+            <button onclick="window.location.href='/'">View Documentation</button>
+        </div>
+    </div>
+
+    <script src="js/constants.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/bomb.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/platform.js"></script>
+    <script src="js/powerup.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
